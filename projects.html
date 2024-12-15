@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Projects</title>
-    <!-- Copy the same style section from index.html and add: -->
     <style>
-        
-        /* [Previous styles from index.html] */
-
+        /* [Copy all styles from index.html] */
         /* Additional Projects Styles */
         .projects-grid {
             display: grid;
@@ -27,11 +24,6 @@
 
         .project-card:hover {
             transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
         }
 
         .tech-stack {
@@ -71,7 +63,7 @@
             <nav class="tab-nav">
                 <a href="index.html">About Me</a>
                 <a href="projects.html" class="active">Projects</a>
-                <a href="resume.html">Resume</a>
+                <a href="resume.pdf" target="_blank">Resume</a>
             </nav>
         </div>
     </header>
@@ -82,7 +74,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Customer Churn Prediction Model</h3>
-                    <p>Developed a machine learning model to predict customer churn with 85% accuracy using historical customer data.</p>
+                    <p>Developed a machine learning model to predict customer churn with 85% accuracy using historical customer data. Implemented various classification algorithms and feature engineering techniques.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">scikit-learn</span>
@@ -91,7 +83,30 @@
                     </div>
                     <a href="https://github.com/yourusername/project1" class="project-link">View on GitHub →</a>
                 </div>
-                <!-- Add more project cards as needed -->
+
+                <div class="project-card">
+                    <h3>Real-time Stock Market Dashboard</h3>
+                    <p>Created an interactive dashboard for real-time stock market analysis using Python and Streamlit. Features include technical indicators and customizable visualizations.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">yfinance</span>
+                        <span class="tech-tag">Plotly</span>
+                    </div>
+                    <a href="https://github.com/yourusername/project2" class="project-link">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Natural Language Processing for News Classification</h3>
+                    <p>Built a news article classifier using NLP techniques and deep learning. Achieved 92% accuracy in categorizing articles into different topics.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLTK</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">spaCy</span>
+                    </div>
+                    <a href="https://github.com/yourusername/project3" class="project-link">View on GitHub →</a>
+                </div>
             </div>
         </section>
     </main>
