@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,14 +17,21 @@
             line-height: 1.6;
             color: #333;
             background-color: #f5f5f5;
+            /* Add padding to account for fixed header */
+            padding-top: 140px;
         }
 
-        /* Header and Navigation */
+        /* Fixed Header and Navigation */
         .header {
             background-color: #2c3e50;
             color: white;
             padding: 1rem 0;
-            margin-bottom: 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .nav-container {
@@ -85,6 +93,7 @@
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
         }
 
         /* Profile Section */
@@ -110,6 +119,65 @@
         .skill-tag:hover {
             background-color: #2c3e50;
             color: white;
+        }
+
+        /* Projects Styles */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background-color: #e9ecef;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        /* Resume Styles */
+        .resume-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .resume-section {
+            margin-bottom: 2rem;
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #34495e;
         }
 
         /* Contact Section */
@@ -139,6 +207,10 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            body {
+                padding-top: 180px; /* Increase padding for mobile */
+            }
+
             .tab-nav {
                 flex-direction: column;
                 align-items: center;
