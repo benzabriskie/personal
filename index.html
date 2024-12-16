@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Zabriskie Portfolio</title>
+    <title>Your Name - Data Science Portfolio</title>
     <style>
+        /* Base styles */
         * {
             margin: 0;
             padding: 0;
@@ -19,6 +20,7 @@
             padding-top: 140px;
         }
 
+        /* Header and Navigation */
         .header {
             background-color: #2c3e50;
             color: white;
@@ -78,13 +80,15 @@
             color: #2c3e50;
         }
 
+        /* Main Content Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .content-section {
+        /* Section Styles */
+        .section {
             background-color: white;
             padding: 2rem;
             border-radius: 8px;
@@ -92,15 +96,89 @@
             margin-bottom: 2rem;
         }
 
-        .profile-info {
-            margin-bottom: 2rem;
+        /* Profile Section with Headshot */
+        .profile-section {
+            display: grid;
+            grid-template-columns: minmax(200px, 1fr) 3fr;
+            gap: 2rem;
+            align-items: start;
         }
 
-        .skills {
+        .headshot-container {
+            text-align: center;
+        }
+
+        .headshot {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        /* Section Headers and Content */
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .section-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .section-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .item-date {
+            color: #666;
+        }
+
+        .item-subtitle {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            margin-bottom: 1rem;
+        }
+
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
+            gap: 0.5rem;
         }
 
         .skill-tag {
@@ -116,29 +194,27 @@
             color: white;
         }
 
-        .contact-info {
-            margin-top: 2rem;
-        }
-
-        .contact-item {
+        /* Contact Links */
+        .contact-links {
             display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 0.5rem;
-            margin-bottom: 0.5rem;
-            background-color: #f8f9fa;
-            border-radius: 5px;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
         }
 
-        .contact-item a {
+        .contact-links a {
             color: #2c3e50;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .contact-item a:hover {
+        .contact-links a:hover {
             text-decoration: underline;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             body {
                 padding-top: 180px;
@@ -155,58 +231,130 @@
                 text-align: center;
                 border-radius: 5px;
             }
+
+            .profile-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .headshot-container {
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <div class="nav-container">
             <div class="name-title">
-                <h1>Ben Zabriskie</h1>
+                <h1>Your Name</h1>
                 <p>Data Science Master's Student</p>
             </div>
             <nav class="tab-nav">
                 <a href="index.html" class="active">About Me</a>
                 <a href="projects.html">Projects</a>
-                <a href="resume.pdf" target="_blank">Resume</a>
+                <a href="engineering.html">Engineering</a>
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section class="content-section">
-            <div class="profile-info">
-                <h2>About Me</h2>
-                <p>
-                    Hello! I am a master's student at Georgia Tech pursuing a Master's of Science in Computational Data Analytics.
-                    I graduated Highest Honors from Georgia Tech, receiving a B.S. in Aerospace Engineering. 
-                    This website serves as a repository for some of my projects in engineering and data science.
-                    Please peruse the tabs above to see my work!
-                </p>
-                <div class="skills">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">R</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Data Visualization</span>
-                    <span class="skill-tag">Statistical Analysis</span>
+        <!-- Overview Section with Headshot -->
+        <section class="section profile-section">
+            <div class="headshot-container">
+                <img src="your-photo.jpg" alt="Your Name" class="headshot">
+                <div class="contact-links">
+                    <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer">📧 Email</a>
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
                 </div>
             </div>
+            <div class="overview-content">
+                <h2>Overview</h2>
+                <p>Data Science graduate student with a passion for machine learning and data visualization. Experienced in Python, R, and SQL with a background in statistics and mathematics. Currently focused on applying advanced analytics to solve real-world problems.</p>
+            </div>
+        </section>
 
-            <div class="contact-info">
-                <h2>Contact</h2>
-                <div class="contact-item">
-                    <span>📧</span>
-                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+        <!-- Education and Skills Section -->
+        <section class="section">
+            <h2>Education and Skills</h2>
+            <div class="section-item">
+                <div class="item-header">
+                    <span class="item-title">Master of Science in Data Science</span>
+                    <span class="item-date">Expected May 2024</span>
                 </div>
-                <div class="contact-item">
-                    <span>💻</span>
-                    <a href="https://github.com/yourusername">GitHub Profile</a>
+                <div class="item-subtitle">Your University Name</div>
+                <p>Relevant Coursework: Machine Learning, Statistical Computing, Deep Learning, Big Data Analytics</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <span>💼</span>
-                    <a href="https://linkedin.com/in/yourusername">LinkedIn Profile</a>
+                <div class="skill-category">
+                    <h3>Machine Learning</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                    </div>
                 </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="section">
+            <h2>Work Experience</h2>
+            <div class="section-item">
+                <div class="item-header">
+                    <span class="item-title">Data Science Intern</span>
+                    <span class="item-date">June 2023 - August 2023</span>
+                </div>
+                <div class="item-subtitle">Company Name</div>
+                <p>Description of your role and achievements...</p>
+            </div>
+            <!-- Add more work experience items as needed -->
+        </section>
+
+        <!-- Research Section -->
+        <section class="section">
+            <h2>Research</h2>
+            <div class="section-item">
+                <div class="item-header">
+                    <span class="item-title">Research Project Title</span>
+                    <span class="item-date">2023 - Present</span>
+                </div>
+                <div class="item-subtitle">Research Lab/Department</div>
+                <p>Description of your research work and findings...</p>
+            </div>
+        </section>
+
+        <!-- Extracurriculars Section -->
+        <section class="section">
+            <h2>Extracurricular Activities</h2>
+            <div class="section-item">
+                <div class="item-header">
+                    <span class="item-title">Data Science Club</span>
+                    <span class="item-date">2022 - Present</span>
+                </div>
+                <div class="item-subtitle">Vice President</div>
+                <p>Description of your role and contributions...</p>
             </div>
         </section>
     </main>
